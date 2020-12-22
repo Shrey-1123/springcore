@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans.xsd 
+  http://www.springframework.org/schema/context 
+  http://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/util 
+  http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- we will create dependecny always for the class that implemetns the 
+		interface also, here class OrderBO has a relationship with OrderDAO -->
+	<!-- <bean class="com.spring.app.OrderDAOImpl" name="dao" /> <bean class="com.spring.app.OrderBOImpl" 
+		name="bo"> <property ref="dao" name="dao" /> </bean> -->
+
+	<!-- using component scan -->
+	<context:component-scan
+		base-package="com.spring.app" />
+	<!-- this is loosely coupled and we can add as many implmentations of the 
+		same bean as we want without changin the previous code -->
+
+	
+
+</beans>
