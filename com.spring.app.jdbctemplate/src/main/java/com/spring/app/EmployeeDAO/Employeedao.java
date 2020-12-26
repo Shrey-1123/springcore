@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 import com.spring.app.Employeedb.Employee;
 
-@Component
+
 public interface Employeedao
 {
 	public int createEmp();
