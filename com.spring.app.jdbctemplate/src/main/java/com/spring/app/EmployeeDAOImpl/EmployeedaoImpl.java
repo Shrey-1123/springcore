@@ -11,9 +11,10 @@ import com.spring.app.EmployeeDAO.Employeedao;
 import com.spring.app.Employeedb.Employee;
 import com.spring.app.EmployeeRowMapper.EmployeerrowMapper;
 
-@Component
+@Component("employeedao")
 public class EmployeedaoImpl implements Employeedao {
 
+	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
 	public JdbcTemplate getJdbcTemplate() {
